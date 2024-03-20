@@ -1,8 +1,10 @@
+import HomePage from "@/components/home";
 
 export default function Home() {
+
   return (
     <main>
-      Hello World
+      <HomePage/>
     </main>
   );
 }
