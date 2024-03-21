@@ -1,10 +1,12 @@
 import HomePage from "@/components/home";
+import { Flex } from "@chakra-ui/react";
 
-export default function Home() {
+
+export default function Home() {  
 
   return (
-    <main>
+    <Flex flexDirection={'column'} b>
       <HomePage/>
-    </main>
+    </Flex>
   );
 }
