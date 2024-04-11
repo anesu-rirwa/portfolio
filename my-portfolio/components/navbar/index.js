@@ -16,13 +16,16 @@ import {
 import { HamburgerIcon} from '@chakra-ui/icons'
 import { FcContacts, FcIdea, FcDiploma1, FcBusinessman, FcDocument } from 'react-icons/fc'
 
+import '@fontsource-variable/source-code-pro'
+import theme from '@/theme/fonts'
+
 const Links = ['01.about-me', '02.projects', '03.experience', '04.blog', '05.contact-me']
 
 const NavLink = (props) => {
   const { children } = props
 
   return (
-    <Box
+    <Box theme={theme}
       as="a"
       px={2}
       py={1}

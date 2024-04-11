@@ -1,52 +1,83 @@
 import React from 'react'
-import { FaLinkedin, FaGithub, FaMailBulk, FaMailchimp } from 'react-icons/fa'
-import { EmailIcon } from '@chakra-ui/icons'
-import { Stack, Text, VisuallyHidden, chakra, useColorModeValue } from '@chakra-ui/react'
-
-const SocialButton = ({
-    children,
-    label,
-    href,
-  }) => {
-    return (
-      <chakra.button
-        bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-        rounded={'full'}
-        w={8}
-        h={8}
-        cursor={'pointer'}
-        as={'a'}
-        href={href}
-        display={'inline-flex'}
-        alignItems={'center'}
-        justifyContent={'center'}
-        transition={'background 0.3s ease'}
-        _hover={{
-          bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-        }}>
-        <VisuallyHidden>{label}</VisuallyHidden>
-        {children}
-      </chakra.button>
-    )
-  }
+import { Stack, Tooltip, useColorModeValue, useClipboard, IconButton, Box } from '@chakra-ui/react'
+import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs'
+import { MdEmail } from 'react-icons/md'
 
 const SocialLinks = () => {
+  const { hasCopied, onCopy } = useClipboard('example@example.com')
+  
   return (
     <>
-        <Stack direction={'row'} spacing={6}>
-          <Text alignSelf={'center'}>© 2022 </Text>
-        
-          <SocialButton label={'Github'} href={'#'}>
-            <FaGithub />
-          </SocialButton>
+      <Stack
+            spacing={{ base: 4, md: 8, lg: 20 }}
+            direction={"row"}
+            align={{base: "center", md: "start"}}
+            justify={{base: "center", md: "start"}}
+            >
+          <Stack
+            direction={'row'}>
+            <Tooltip
+              label={hasCopied ? 'Email Copied!' : 'Copy Email'}
+              closeOnClick={false}
+              hasArrow>
+              <IconButton
+                aria-label="email"
+                variant="ghost"
+                size="lg"
+                fontSize="3xl"
+                icon={<MdEmail />}
+                _hover={{
+                  bg: 'blue.500',
+                  color: useColorModeValue('white', 'gray.700'),
+                }}
+                onClick={onCopy}
+                isRound
+              />
+            </Tooltip>
 
-          <SocialButton label={'LinkedIn'} href={'#'}>
-            <FaLinkedin />
-          </SocialButton>
+            <Box as="a" href="#">
+              <IconButton
+                aria-label="github"
+                variant="ghost"
+                size="lg"
+                fontSize="3xl"
+                icon={<BsGithub />}
+                _hover={{
+                  bg: 'blue.500',
+                  color: useColorModeValue('white', 'gray.700'),
+                }}
+                isRound
+              />
+            </Box>
 
-          <SocialButton label={'LinkedIn'} href={'#'}>
-            <EmailIcon />
-          </SocialButton>
+            <Box as="a" href="#">
+              <IconButton
+                aria-label="twitter"
+                variant="ghost"
+                size="lg"
+                icon={<BsTwitter size="28px" />}
+                _hover={{
+                  bg: 'blue.500',
+                  color: useColorModeValue('white', 'gray.700'),
+                }}
+                isRound
+              />
+            </Box>
+
+            <Box as="a" href="#">
+              <IconButton
+                aria-label="linkedin"
+                variant="ghost"
+                size="lg"
+                icon={<BsLinkedin size="28px" />}
+                _hover={{
+                  bg: 'blue.500',
+                  color: useColorModeValue('white', 'gray.700'),
+                }}
+                isRound
+              />
+            </Box>
+          </Stack>
         </Stack>
     </>
   )

@@ -26,7 +26,7 @@ const TechStack = () => {
         <Stack
             spacing={4}
             divider={
-            <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
+            <StackDivider borderColor={useColorModeValue('gray.300', 'gray.700')} />
             }>
             <Text
             textTransform={'uppercase'}

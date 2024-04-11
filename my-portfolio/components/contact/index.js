@@ -11,13 +11,13 @@ import {
   Input,
   InputGroup,
   InputLeftElement,
-  Text,
   Stack,
   Textarea,
   Tooltip,
   useClipboard,
   useColorModeValue,
   VStack,
+  Show
 } from '@chakra-ui/react'
 import { BsGithub, BsLinkedin, BsPerson, BsTwitter } from 'react-icons/bs'
 import { MdEmail, MdOutlineEmail } from 'react-icons/md'
@@ -42,17 +42,17 @@ export default function Contact() {
 
   return (
     <Flex
-      bg={useColorModeValue('gray.200', 'gray.900')}
-      align="center"
-      justify="center"
+      bg={useColorModeValue('gray.100', 'gray.900')}
+      align={{base: "center", lg: "start"}}
+      justify={{base: "center", lg: "start"}}
       css={{
         backgroundImage: useColorModeValue(CONFETTI_LIGHT, CONFETTI_DARK),
         backgroundAttachment: 'fixed',
       }}
-      id="contact">
-      <Box borderRadius="lg" m={{ base: 5, md: 16, lg: 10 }} p={{ base: 5, lg: 16 }}>
+      id="05.contact-me">
+      <Box borderRadius="lg" m={{ base: 5, md: 16, lg: 0 }} p={{ base: 5, lg: 0 }} mt={{lg: 16}}>
         <Box>
-          <VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+          <VStack spacing={{ base: 4, md: 8, lg: 12 }}>
             <Heading
               fontSize={{
                 base: '4xl',
@@ -62,74 +62,76 @@ export default function Contact() {
             </Heading>
 
             <Stack
-              spacing={{ base: 4, md: 8, lg: 20 }}
+              spacing={{ base: 4, md: 8, lg: 12 }}
               direction={{ base: 'column', md: 'row' }}>
-              <Stack
-                align="center"
-                justify="space-around"
-                direction={{ base: 'row', md: 'column' }}>
-                <Tooltip
-                  label={hasCopied ? 'Email Copied!' : 'Copy Email'}
-                  closeOnClick={false}
-                  hasArrow>
-                  <IconButton
-                    aria-label="email"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<MdEmail />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    onClick={onCopy}
-                    isRound
-                  />
-                </Tooltip>
+              <Show below='md'>
+                <Stack
+                  align="center"
+                  justify="space-around"
+                  direction={{ base: 'row', md: 'column' }}>
+                  <Tooltip
+                    label={hasCopied ? 'Email Copied!' : 'Copy Email'}
+                    closeOnClick={false}
+                    hasArrow>
+                    <IconButton
+                      aria-label="email"
+                      variant="ghost"
+                      size="lg"
+                      fontSize="3xl"
+                      icon={<MdEmail />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      onClick={onCopy}
+                      isRound
+                    />
+                  </Tooltip>
 
-                <Box as="a" href="#">
-                  <IconButton
-                    aria-label="github"
-                    variant="ghost"
-                    size="lg"
-                    fontSize="3xl"
-                    icon={<BsGithub />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Box>
+                  <Box as="a" href="#">
+                    <IconButton
+                      aria-label="github"
+                      variant="ghost"
+                      size="lg"
+                      fontSize="3xl"
+                      icon={<BsGithub />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+                  </Box>
 
-                <Box as="a" href="#">
-                  <IconButton
-                    aria-label="twitter"
-                    variant="ghost"
-                    size="lg"
-                    icon={<BsTwitter size="28px" />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Box>
+                  <Box as="a" href="#">
+                    <IconButton
+                      aria-label="twitter"
+                      variant="ghost"
+                      size="lg"
+                      icon={<BsTwitter size="28px" />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+                  </Box>
 
-                <Box as="a" href="#">
-                  <IconButton
-                    aria-label="linkedin"
-                    variant="ghost"
-                    size="lg"
-                    icon={<BsLinkedin size="28px" />}
-                    _hover={{
-                      bg: 'blue.500',
-                      color: useColorModeValue('white', 'gray.700'),
-                    }}
-                    isRound
-                  />
-                </Box>
-              </Stack>
+                  <Box as="a" href="#">
+                    <IconButton
+                      aria-label="linkedin"
+                      variant="ghost"
+                      size="lg"
+                      icon={<BsLinkedin size="28px" />}
+                      _hover={{
+                        bg: 'blue.500',
+                        color: useColorModeValue('white', 'gray.700'),
+                      }}
+                      isRound
+                    />
+                  </Box>
+                </Stack>
+              </Show>
 
               <Box
                 bg={useColorModeValue('white', 'gray.700')}
