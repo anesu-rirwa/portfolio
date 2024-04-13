@@ -8,7 +8,8 @@ import {
   Show,
   Stack,
   useColorModeValue,
-  Flex
+  Flex,
+  Center
 } from '@chakra-ui/react'
 import { TypeAnimation } from 'react-type-animation'
 import NavLinks from '../navbar/links'
@@ -19,11 +20,14 @@ export default function Hero() {
   return (
     <>
       <Container maxW={'3xl'}  px={{base: "10", lg: "12"}} height={'100vh'}
-      bg={useColorModeValue('gray.100', 'gray.900')}>
+      bg={useColorModeValue('gray.100', 'gray.900')} align={{lg: 'center'}}
+      justify={{lg: 'center'}} alignItems={{lg: 'center'}}
+      >
         <Stack
           as={Box}
           spacing={{ base: 8, md: 14 }}
-          py={{ base: 10, md: 12 }}>
+          py={{ base: 10, md: 12 }}
+          >
           
           <Heading
             fontWeight={600}

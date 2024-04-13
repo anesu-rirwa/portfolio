@@ -102,12 +102,14 @@ const ProjectList = () => {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-          <BlogTags tags={['Engineering', 'Product']} />
-          <Heading marginTop="1">
+          <Heading>
             <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
-              Blog article title
+              Project Title
             </Text>
           </Heading>
+
+          <BlogTags marginTop="1" tags={['Engineering', 'Product']} />
+
           <Text
             as="p"
             marginTop="2"
