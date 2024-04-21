@@ -5,7 +5,7 @@ const MyInfo = () => {
     return (
         <>
             <Text color={'gray.600'} textAlign={'center'} fontSize={16}>
-                I'm Anesu Rirwa, a passionate software developer with a knack for crafting elegant solutions to complex problems. With a strong foundation in both web and mobile development, coupled with my enthusiasm for Artificial Intelligence and machine learning, I thrive in dynamic environments where innovation and creativity are valued.
+                I'm Anesu Rirwa, a proficient software engineer. I excel in designing, developing, and implementing software applications. I leverage my expertise in Javascript, Python, and Java to write scalable, secure code while demonstrating a strong knack for problem-solving. Additionally, I bring a passion for machine learning, with skills in building and deploying models using libraries like TensorFlow and scikit-learn, contributing to innovative solutions at the intersection of AI and software development
             </Text>
         </>
     )

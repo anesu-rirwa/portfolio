@@ -51,7 +51,7 @@ const ProjectList = () => {
         backgroundAttachment: 'fixed',
       }}
     >
-      <Heading as="h1" textAlign={{base: "center", md: "left"}} fontSize={{base: '4xl'}}>Projects</Heading>
+      <Heading as="h1" textAlign={{base: "center", md: "left"}}>Projects</Heading>
 
       <Box
         marginTop={{ base: '1', sm: '5' }}
@@ -102,12 +102,10 @@ const ProjectList = () => {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-          <Heading>
-            <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
-              Project Title
-            </Text>
-          </Heading>
-
+          <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
+            Project Title
+          </Text>
+          
           <BlogTags marginTop="1" tags={['Engineering', 'Product']} />
 
           <Text

@@ -18,7 +18,7 @@ const HomePage = () => {
 
         <Flex height="100vh" flexDirection={{base: 'column', lg: 'row'}}>
           {/* Fixed section */}
-          <Box width={{base: '100%', lg: '40%'}} >
+          <Box width={{base: '100%', lg: '40%'}}>
             <Hero />
           </Box>
 
