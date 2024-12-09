@@ -1,15 +1,11 @@
----
-layout: default
-title: "Welcome"
----
-
 # Anesu Rirwa  
 
-**Machine Learning Engineer | Software Developer**  
+**Data Scientist | Software Developer**  
 **Email:** [anesurirwa@outlook.com](mailto:anesurirwa@outlook.com)  
 **LinkedIn:** [linkedin.com/in/anesurirwa](https://linkedin.com/in/anesurirwa)
+**Github:** [https://github.com/anesu-rirwa] 
 
-## About Me  
+## About Me
 I am a recent AI and ML graduate passionate about data science and software development.  
 
 ## Skills  
