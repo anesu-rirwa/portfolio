@@ -1,9 +1,8 @@
-# Anesu Rirwa  
+# Data Scientist | Software Developer
 
-**Data Scientist | Software Developer**  
-**Email:** [anesurirwa@outlook.com](mailto:anesurirwa@outlook.com)  
-**LinkedIn:** [linkedin.com/in/anesurirwa](https://linkedin.com/in/anesurirwa)
-**Github:** [https://github.com/anesu-rirwa] 
+**Email:** [anesurirwa@outlook.com](mailto:anesurirwa@outlook.com) 
+**LinkedIn:** [linkedin.com/in/anesurirwa](https://linkedin.com/in/anesurirwa) 
+**GitHub:** [github.com/anesu-rirwa](https://github.com/anesu-rirwa) 
 
 ## About Me
 I am a recent AI and ML graduate passionate about data science and software development.  
